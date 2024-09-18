@@ -2,11 +2,8 @@ import { Hono } from 'hono'
 
 const app = new Hono()
 
-app.get('/api/hello', (c) => {
-  return c.json({
-    ok: true,
-    message: 'Hello Hono!',
+  app.get('/pokemon/:025', (c) => {
+    return c.text(`This Pokemon is Pikachu. Number 025.`)
   })
-})
 
 export default app
