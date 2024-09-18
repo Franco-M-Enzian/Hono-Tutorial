@@ -2,10 +2,11 @@ import { Hono } from 'hono'
 
 const app = new Hono()
 
-app.get('/Tutorial', (c) => {
-  return c.text(
-    'Honoのチュートリアルをしています。URLを変えることもできます。'
-  )
+app.get('/api/hello', (c) => {
+  return c.json({
+    ok: true,
+    message: 'Hello Hono!',
+  })
 })
 
 export default app
